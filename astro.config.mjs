@@ -5,8 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://kaiserai.github.io',
-  base: '/kaiserAILandingPage',
+  site: 'https://pkaiserui.github.io',
+  base: '/kaiseralilandingpage',
   output: 'static',
   vite: {
     plugins: [tailwindcss()]
