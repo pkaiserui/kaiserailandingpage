@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Kaiser AI — Custom Digital Solutions & AI-Powered Products',
+  description = 'Kaiser AI builds custom mobile apps, web platforms, and AI-powered digital solutions for startups and growing businesses. From concept to deployment.',
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#253943" />
+    <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${base}favicon-32x32.png`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${base}favicon-16x16.png`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${base}apple-touch-icon.png`} />
+    <link rel="manifest" href={`${base}site.webmanifest`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-surface text-ink font-sans antialiased overflow-x-hidden">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-ink focus:text-surface focus:rounded-lg focus:outline-none">Skip to main content</a>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,43 @@
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# editor / tooling metadata (keep out of git)
+.vscode/
+.vs/
+.cursor/
+.agents/
+
+# Astro / Vite caches
+.astro/
+.vercel/
+.turbo/
+.vite/
+
+# test coverage / reports (if added later)
+coverage/
+*.lcov
+
+# lockfiles from other package managers (we use npm + package-lock)
+yarn.lock
+pnpm-lock.yaml

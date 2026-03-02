@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* Kaiser AI — Watercolor neural palette: minimal, technical, human-centered */
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Outfit', var(--font-sans);
+
+  /* Extracted palette */
+  --color-surface: #FEFEFE;
+  --color-surface-alt: #E5E7E6;
+  --color-muted: #A98A7B;
+  --color-brand: #93ADB7;
+  --color-mid: #607984;
+  --color-ink: #253943;
+
+  /* Pop accent — vivid cornflower blue */
+  --color-pop: #70A0BC;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal-left, .reveal-right { transition: none; }
+  .animate-float, .animate-float-delayed, .animate-float-slow { animation: none; }
+  .pulse-cta { animation: none; }
+}
+
+[id="main"],
+[id="about"],
+[id="portfolio"],
+[id="testimonials"],
+[id="contact"] {
+  scroll-margin-top: 5rem;
+}
+
+/* Scroll-reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.stagger > * {
+  transition-delay: calc(var(--stagger, 0) * 80ms);
+}
+
+/* Pop gradient: muted → pop blue → mid slate */
+.text-gradient {
+  background: linear-gradient(135deg, #93ADB7 0%, #70A0BC 55%, #607984 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #93ADB7 0%, #70A0BC 55%, #607984 100%);
+}
+
+/* Hero: more visible pop-tinted mesh */
+.hero-mesh {
+  background-image:
+    radial-gradient(at 30% 20%, rgba(112, 160, 188, 0.14) 0%, transparent 50%),
+    radial-gradient(at 75% 75%, rgba(147, 173, 183, 0.10) 0%, transparent 50%);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(112, 160, 188, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(112, 160, 188, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Card hover — subtle lift, mineral shadow */
+.card-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -8px rgba(37, 57, 67, 0.12);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 5s ease-in-out 1.5s infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out 0.5s infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(112, 160, 188, 0.35); }
+  50% { box-shadow: 0 0 0 12px rgba(112, 160, 188, 0); }
+}
+
+.pulse-cta {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-cta { animation: none; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+button, [type="button"], [type="submit"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(112, 160, 188, 0.2);
+}
+
+/* Contact form fields — shared styling with black outline */
+.form-field {
+  border-width: 1px;
+  border-color: #000000;
+}
+
+.form-field:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Kaiser AI",
+  "short_name": "Kaiser AI",
+  "icons": [
+    { "src": "/kaiserAILandingPage/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/kaiserAILandingPage/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#253943",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
