@@ -125,21 +125,11 @@ const SHOW_TESTIMONIALS = false;
             <span class="text-gradient">One Product at a Time</span>
           </h2>
           <p class="text-lg text-mid leading-relaxed mb-6">
-            Kaiser AI LLC is a technology company specializing in the design and development of custom mobile applications, web platforms, and AI-powered digital solutions. We help startups, small businesses, and growing enterprises transform ideas into scalable, high-performance digital products.
+            Kaiser AI is a technology company specializing in the design and development of custom mobile applications, web platforms, and AI-powered digital solutions. We help startups, small businesses, and growing enterprises transform ideas into scalable, high-performance digital products.
           </p>
-          <p class="text-lg text-mid leading-relaxed mb-10">
+          <p class="text-lg text-mid leading-relaxed">
             We combine modern software engineering with artificial intelligence to build intuitive user experiences, automation systems, and data-driven applications — prioritizing clean architecture, security, scalability, and performance in everything we build.
           </p>
-          <div class="grid grid-cols-2 gap-6">
-            <div class="p-5 rounded-2xl bg-surface border border-surface-alt shadow-sm">
-              <div class="text-3xl font-extrabold text-gradient mb-1">End-to-End</div>
-              <div class="text-sm text-muted">Concept to deployment & beyond</div>
-            </div>
-            <div class="p-5 rounded-2xl bg-surface border border-surface-alt shadow-sm">
-              <div class="text-3xl font-extrabold text-gradient mb-1">AI-First</div>
-              <div class="text-sm text-muted">ML, chatbots & automation</div>
-            </div>
-          </div>
         </div>
 
         <!-- Right: services grid -->
@@ -361,15 +351,6 @@ const SHOW_TESTIMONIALS = false;
           <div class="space-y-6">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-surface-alt flex items-center justify-center shrink-0">
-                <svg class="w-6 h-6 text-pop" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-              </div>
-              <div>
-                <div class="font-semibold text-ink">Email Us</div>
-                <a href="mailto:hello@kaiserai.com" class="text-pop hover:text-ink transition-colors">hello@kaiserai.com</a>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-surface-alt flex items-center justify-center shrink-0">
                 <svg class="w-6 h-6 text-pop" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               </div>
               <div>
@@ -389,86 +370,26 @@ const SHOW_TESTIMONIALS = false;
           </div>
         </div>
 
-        <!-- Right: form -->
-        <div class="reveal-right">
-          <form id="contact-form" class="p-8 sm:p-10 rounded-3xl bg-surface border border-surface-alt shadow-lg shadow-ink/5" aria-label="Contact form">
-            <div class="space-y-5">
-              <div>
-                <label for="name" class="block text-sm font-medium text-ink mb-1.5">Full Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  autocomplete="name"
-                  class="form-field w-full px-4 py-3 rounded-xl bg-surface-alt/50 text-ink placeholder-muted transition-[box-shadow,border-color]"
-                  placeholder="Jane Smith"
-                />
-              </div>
-              <div>
-                <label for="email" class="block text-sm font-medium text-ink mb-1.5">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  autocomplete="email"
-                  spellcheck="false"
-                  class="form-field w-full px-4 py-3 rounded-xl bg-surface-alt/50 text-ink placeholder-muted transition-[box-shadow,border-color]"
-                  placeholder="jane@company.com"
-                />
-              </div>
-              <div>
-                <label for="phone" class="block text-sm font-medium text-ink mb-1.5">
-                  Phone Number <span class="text-mid text-xs font-normal">(optional)</span>
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  autocomplete="tel"
-                  class="form-field w-full px-4 py-3 rounded-xl bg-surface-alt/50 text-ink placeholder-muted transition-[box-shadow,border-color]"
-                  placeholder="+1 (555) 123-4567"
-                />
-              </div>
-              <div>
-                <label for="project-type" class="block text-sm font-medium text-ink mb-1.5">Project Type</label>
-                <select
-                  id="project-type"
-                  name="project-type"
-                  aria-label="Project type"
-                  class="form-field w-full px-4 py-3 rounded-xl bg-surface-alt/50 text-ink transition-[box-shadow,border-color]"
-                >
-                  <option value="" disabled selected>Select a project type</option>
-                  <option value="mobile">Mobile App Development</option>
-                  <option value="web">Web Platform</option>
-                  <option value="ai">AI / ML Solution</option>
-                  <option value="api">API / Cloud Integration</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="message" class="block text-sm font-medium text-ink mb-1.5">Tell Us About Your Project</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  required
-                  aria-label="Project description"
-                  class="form-field w-full px-4 py-3 rounded-xl bg-surface-alt/50 text-ink placeholder-muted transition-[box-shadow,border-color] resize-none"
-                  placeholder="Describe your idea, timeline, and any specific requirements…"
-                ></textarea>
-              </div>
-              <button type="submit"
-                class="w-full py-4 bg-pop text-surface font-semibold rounded-xl hover:bg-pop/90 transition-colors shadow-lg shadow-pop/25 flex items-center justify-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pop focus-visible:ring-offset-2">
-                Send Message
-                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
-              </button>
+        <!-- Right: Book a meeting -->
+        <div class="reveal-right flex flex-col justify-center">
+          <div class="p-8 sm:p-10 rounded-3xl bg-surface border border-surface-alt shadow-lg shadow-ink/5 text-center">
+            <div class="w-14 h-14 rounded-2xl bg-pop/10 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-7 h-7 text-pop" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+              </svg>
             </div>
-            <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-surface-alt border border-muted text-mid text-center font-medium" role="status" aria-live="polite">
-              Thanks for reaching out! We'll get back to you soon.
-            </div>
-          </form>
+            <h3 class="text-xl font-bold text-ink mb-2">Book a meeting</h3>
+            <p class="text-mid text-sm sm:text-base mb-8 max-w-sm mx-auto">Pick a time that works for you and we’ll take it from there.</p>
+            <a
+              href="https://calendar.app.google/fVDpuBPtrJtqznon6"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-pop text-surface font-semibold rounded-xl hover:bg-pop/90 transition-colors shadow-lg shadow-pop/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pop focus-visible:ring-offset-2"
+            >
+              Choose a time
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -568,21 +489,5 @@ const SHOW_TESTIMONIALS = false;
     }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
     revealElements.forEach(el => observer.observe(el));
 
-    // Contact form
-    const form = document.getElementById('contact-form') as HTMLFormElement;
-    const successMsg = document.getElementById('form-success');
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      form.querySelectorAll('input, textarea, select, button').forEach((el) => {
-        (el as HTMLInputElement).disabled = true;
-      });
-      successMsg?.classList.remove('hidden');
-      setTimeout(() => {
-        form.reset();
-        form.querySelectorAll('input, textarea, select, button').forEach((el) => {
-          (el as HTMLInputElement).disabled = false;
-        });
-      }, 3000);
-    });
   </script>
 </Layout>
